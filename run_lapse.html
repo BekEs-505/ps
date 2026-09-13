@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEKES PS4 JB - Lapse</title>
+    <link rel="stylesheet" href="includes/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="m-1">B</span><span class="m-2">E</span><span class="m-3">K</span><span class="m-4">E</span><span class="m-5">S</span><span class="m-6">P</span><span class="m-7">S</span>
+                    <span class="p-1">4</span><span class="p-2">J</span><span class="p-3">B</span>
+                    <span class="q-1"></span><span class="q-2"></span>
+                </h1>
+                <div class="subtitle">Social Media : @B6_7E</div>
+                <div class="version-badge">LAPSE CHAIN</div>
+            </div>
+        </header>
+
+        <h3 id="UA">Lapse chain</h3>
+        <hr>
+
+        <div class="btn-container">
+            <div id="state" class="loading">⏳ Loading lapse chain...</div>
+            <pre id="out"></pre>
+        </div>
+
+        <footer>
+            <p class="credit">Designed by <a href="#" class="credit-link">.👻 𝐁𝐄𝐊𝐄𝐒 | بيكاس :</a></p>
+            <p class="thanks">Special thanks to all scene developers</p>
+        </footer>
+
+        <script type="module">
+            import("./chain_lapse.js").catch(function(e) {
+                var stateEl = document.getElementById("state");
+                stateEl.innerHTML = "❌ Failed!";
+                stateEl.className = "error";
+            });
+        </script>
+    </div>
+</body>
+</html>
